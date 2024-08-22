@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+h1 {
+  font-size: 40px;
+  color:#5449f6;
+}
+body {
+  font-family: "Permanent Marker", cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background: linear-gradient(
+       120deg,
+        #fc934d,
+        #f84181,
+        #b486fa
+    );
+}
+.board {
+  width: 300px;
+  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+.cell {
+  font-size: 4rem;
+  border-bottom: 5px solid black;
+  border-right: 5px solid black;
+  text-align: center;
+  text-transform: lowercase;
+  cursor: pointer;
+  user-select: none;
+}
+.cell:nth-child(3n) {
+  border-right: none;
+}
+.cell:nth-child(n + 7) {
+  border-bottom: none;
+}
+.statusText {
+  font-size: 30px;
+  color: #5449f6;
+}
+.restartBtn {
+  background-color: #df06fc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.restartBtn:hover {
+  background-color: #f873db;
+}
+div.rule{
+  position: absolute;
+  right:150px;
+  width: 200px;
+  height:500px;
+}
